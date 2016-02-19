@@ -511,3 +511,4 @@ var  F = function(){};
 F.prototype = Person.prototype;
 Student.prototype  = new F();
 Student.prototype.constructor  = Student;
+//点击过后hover失效 css加!important
