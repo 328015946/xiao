@@ -554,7 +554,25 @@ Student.prototype.constructor  = Student;
 	 }
 
 
-
+//简单判断中英文字节 中文两个字节 英文1个
+    function Checkval()   
+   {   
+      
+      var n=0;   
+      for(var i=0;i<s.value.length;i++)   
+      {   
+      //charCodeAt()可以返回指定位置的unicode编码,这个返回值是0-65535之间的整数   
+        if(s.value.charCodeAt(i)<128)   
+        {   
+         n++;    
+        }   
+        else   
+        {   
+         n+=2;   
+        }   
+      }   
+      alert(n);   
+  }  
 
 
 
