@@ -1,0 +1,12 @@
+//插件开发注意点
+$.fn.myPlugin = function(options) {
+    var defaults = {
+        'color': 'red',
+        'fontSize': '12px'
+    };
+    var settings = $.extend({},defaults, options);//将一个空对象做为第一个参数 防止默认参数被改变
+    return this.css({
+        'color': settings.color,
+        'fontSize': settings.fontSize
+    });
+}
