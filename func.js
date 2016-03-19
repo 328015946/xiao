@@ -512,3 +512,63 @@ F.prototype = Person.prototype;
 Student.prototype  = new F();
 Student.prototype.constructor  = Student;
 //点击过后hover失效 css加!important
+//
+//轮播思想
+//轮播图;
+	var curr1=0;
+	$("#count span").first().addClass("imgselected");
+	$("#count span").each(function(index){
+
+		$(this).click(function(){
+			var _index=index;
+			clearInterval(sumcount);
+			curr1=_index;
+			changeto(_index);
+		})
+	})
+	$("#count span").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer=setInterval(sumcount1,3000);
+		
+	})
+	function sumcount1(){
+		var imglength=$(".container img").length-1;
+		if(curr1 < imglength){ 
+        curr1 ++; 
+		}else{ 
+        curr1= 0;
+		}
+	  changeto(curr1);
+		
+	}
+ 
+	  var timer=setInterval(sumcount1,3000);
+
+	function changeto(num){
+		 $("#count span").eq(num).addClass("imgselected").siblings("span").removeClass("imgselected");
+		 $("#trip-img .container").animate({
+			left:(num*-323)+'px'
+		},500)
+		 
+	 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
