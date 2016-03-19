@@ -575,7 +575,16 @@ Student.prototype.constructor  = Student;
   }  
 
 
-
+//格式化日期
+    function formateDate(date) {
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        var d = date.getDate();
+        var h = date.getHours();
+        var mi = date.getMinutes();
+        m = m > 9 ? m : '0' + m;
+        return y + '-' + m + '-' + d + ' ' + h + ':' + mi;
+    }
 
 
 
