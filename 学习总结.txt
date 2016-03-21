@@ -149,6 +149,23 @@ $(".bigg_box").showimg({time:2000});
 
 })
 
+//随机颜色
+function randomColor(){
+ var arrHex=["0","1","2","3","4","5","6","7","8","9","a","b","c","d"],
+     strHex="#",
+     index;
+     for(var i=0;i<6;i++){
+      index=Math.floor(Math.random()*14);
+      strHex+=arrHex[index];
+     }
+	return strHex;
+}
+
+var cc=randomColor();
+//第二种方法
+function getRandomColor(){
+    return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6);
+}
 
 
 
