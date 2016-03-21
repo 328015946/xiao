@@ -42,3 +42,135 @@ $.fn.myPlugin = function(options) {
     //调用其方法
     return beautifier.beautify();
 }
+
+
+
+
+//2016 3 21 练习插件
+
+//html
+<div class="big_box">
+	<div class="show_box">
+		<img src="images/8.png">
+		<img src="images/9.png">
+		<img src="images/10.png">
+		<img src="images/11.png">
+	</div>
+
+</div>
+
+//css
+.show_box img{float:left}
+.big_box{width:300px;height:200px;overflow:hidden}
+.show_box{width:1200px;}
+span{padding:5px;background:gray;margin:0 2px;cursor:pointer}
+ span:hover{background:green}
+
+
+//js
+$.fn.showimg=function(options){
+
+	var defaules={
+		time:1000
+	}
+	var options=$.extend({},defaules,options)
+	
+	var ww=$("img",$(this)).first().width();
+
+	var _rhis=$(this);
+	var cunt10=0;
+		$('.show_box').css({
+			overflow:'hidden'
+			
+		});
+		_rhis.css("overflow","hidden").find(".show_box").css({"position":"absolute","left":0,"top":0});
+		var strtex='<div class="count"><span>1</span><span>2</span><span>3</span><span>4</span></div>';
+	
+		_rhis.append(strtex);
+		_rhis.find('span').first().css('background','green');
+		_rhis.css('position','relative').find('.count').css({
+			'position':"absolute",
+			"left":50+'%',
+			"bottom":0,
+			marginLeft:-44+'px'
+
+		})
+		
+			_rhis.hover(function(){
+				clearInterval(timer12);
+			_rhis.find('span').each(function(index){
+					$(this).click(function(){
+					
+						var _index=index;
+						
+						cunt10=_index;
+						change(_index)
+					
+					})
+			
+			})
+
+		},function(){
+		
+		timer12=setInterval(auto,options.time)
+		})
+		
+		var timer12=setInterval(auto,options.time)
+		
+		function auto(){
+		var leng_img=_rhis.find('img').length-1;
+		
+			if(cunt10<leng_img){
+				++cunt10;
+			}else{
+			cunt10=0;
+			}	
+			change(cunt10)
+			
+		}
+		
+		function change(num1){
+		
+		_rhis.find('span').eq(num1).css('background','green').siblings("span").css("background",'gray');
+	
+			_rhis.find('.show_box').animate({
+			
+			left:num1*-ww+'px'
+			},300)
+		
+			}
+
+	}
+
+
+$(".big_box").showimg({time:2000});
+$(".bigg_box").showimg({time:2000});
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
