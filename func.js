@@ -589,7 +589,38 @@ Student.prototype.constructor  = Student;
 
 
 
-
+//倒计时
+window.onload=function(){  
+        function Timeover(){  
+            var timer=null;//定义定时器对象  
+              var oparenttime=document.getElementsByClassName("liktimer")[0]; //获取对象  
+                var endtime="3/30/2016 16:25:59"  //定义结束时间  
+                var endtimer=new Date(endtime).getTime();  
+             var startimer=new Date().getTime();  
+             var opactiontimer=endtimer-startimer;  
+                    var second=opactiontimer/1000;//获取总的秒  
+                    var Minute=Math.floor(second/60);//获取总的分  
+                  var houre=Math.floor(Minute/60);//获取总的小时   
+                var day=Math.floor(houre/24);//获取总的天数  
+                var houres=Math.floor(houre%24);//获取显示的小时  
+                var Minutes=Math.floor(Minute%60);//获取显示的分  
+                var seconds=Math.floor(second%60);//获取显示的秒  
+                document.getElementsByClassName("RemainD")[0].innerHTML=day;  html展示结构
+                document.getElementsByClassName("RemainH")[0].innerHTML=houres;  
+                document.getElementsByClassName("RemainM")[0].innerHTML=Minutes;  
+                document.getElementsByClassName("RemainS")[0].innerHTML=seconds;  
+                if(startimer>endtimer){ //如果当下的时间大于了过期时间，关闭定时器  
+                  clearInterval(timer);  
+                  oparenttime.innerHTML="";  
+                  oparenttime.innerHTML="倒计时已经结束";  
+                }  
+            }  
+            function loop(){  
+                Timeover();  
+                timer=setInterval(Timeover,1000);  
+            }  
+            loop();//消除帅新等待1秒倒计时的bug  
+ }  
 
 
 
