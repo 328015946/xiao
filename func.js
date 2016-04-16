@@ -634,5 +634,25 @@ function removeHTMLTag(str) {
     }
 
 
+      (function(doc, win) {
+                var docEl = doc.documentElement,﻿
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function() {
+                        var clientWidth = docEl.clientWidth;
+                        if (clientWidth > 1080) {
+                            clientWidth = 750;
+                            docEl.style.fontSize = 56 + 'px';
+                        }
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                    };
+                recalc();
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window);
+
+这是设置rem的
+
 
 
