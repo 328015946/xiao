@@ -1,0 +1,361 @@
+/*2016 /7/23*/
+/*shop public */
+.modal textarea{
+	resize:none;
+}
+
+.shop_head{
+	border-bottom:1px solid #ddd;
+	margin-bottom:20px;
+}
+ .nav_right{
+	position: absolute;
+    top: 0px;
+    right: 28px;
+}
+/*商品左边*/
+.shop-left>img{
+	display:block;
+	margin:0 auto;
+}
+.carousel-caption{
+	color:#000;
+}
+/*商品左边图片*/
+.img_loop{height:478px!important;}
+/*商品右边*/
+.shop-right h1{
+	font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    font-family: "microsoft yahei";
+}
+.shop-right dl dt{
+	float:left;
+	width: 66px;
+	color:#999;
+
+}
+.shop-right dl dt.price_tit{
+	line-height:42px;
+}
+.shop-right dl dd.price{
+	
+    font-size: 30px;
+    color: #c40000;
+}
+.shop-right dl dd{
+	float:left;
+	color:#4C4B4B;
+	font-size:18px;
+	
+}
+.shop-right ul{
+	padding-left:0px;
+}
+.shop-right ul li{
+	list-style:none;
+	float:left;
+	margin: 0 4px 4px 0;
+}
+
+.shop-right dl  a{
+	float: left;
+    background-color: #fff;
+    white-space: nowrap;
+    width: auto!important;
+    min-width: 10px;
+    padding: 0 9px;
+    text-align: center;
+    border: 1px solid #b8b7bd;
+    color: #999;
+	line-height: 26px;
+    text-decoration: none;
+}
+.shop-right dl  a:hover{text-decoration:none}
+/*增减按钮组*/
+ .num_btn{
+	
+	display: inline-block;
+    *display: inline;
+    *zoom:1;vertical-align: middle;
+	line-height:28px;
+	
+}
+
+ .num_btn a{
+	display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+	_display:inline;
+    border: 1px solid #ccc;
+    line-height: 18px;
+    padding: 0;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: center;
+    background-color: #D5C3C3;
+    overflow: hidden;
+	padding:4px;
+	font-size:20px;
+	font-weight:bold;
+	color:#3C3C3C;
+	
+}
+.num_btn a:link{text-decoration:none;}
+.num_btn a:visited{text-decoration:none;}
+.num_btn a:hover{text-decoration:none;}
+.num_btn a:active{text-decoration:none;}
+
+ .num_btn a.disable{
+	cursor:not-allowed;
+	background-color:#ededed;
+	color:#CEC2C2;
+}
+ .shop-right dl a.selected{
+	border: 1px solid #EF0600;
+}
+ .num_btn a.increase_btn{
+	margin-right:5px;
+}
+
+ .info{
+	color:red;
+	font-size:18px;
+	font-weight:bold;
+	margin-left:5px;
+}
+ .num_btn input{
+	float: left;
+    margin: 0;
+    padding: 0;
+    width:48px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #b8b7bd;
+    outline: 0;
+	border-left:none;
+	border-right:none;
+    background: #FFF;
+}
+
+/*end*/
+
+.shop-right .btn_buy{
+	font-size:22px;
+	padding:5px 25px;
+	font-weight:bold;
+	color:#fff;
+	background-color:#e93a38;
+	margin-left:66px;
+}
+.shop-right .btn_buy:hover{
+	background-color:#B71412;
+}
+
+/*商品详情*/
+.shop_details{margin:40px 0px;}
+.shop_details h2{
+	color:#bdbdbd;
+	font-size:36px;
+	text-align:center;
+	letter-spacing:10px;
+	margin-bottom:40px;
+	margin-top:40px;
+	
+}
+.shop_details .tips{
+	padding:20px;
+	background:red;
+	height:120px;
+	width:120px;
+	font-size:32px;
+	color:#fff;
+	display:inline-block;
+	word-break:break-all;
+	text-align:center;
+	border-radius:50%;
+}
+.tips_con{margin-bottom:50px;}
+.tips_con >div:nth-of-type(1) .tips{
+	background:#efb3b3;
+}
+.tips_con >div:nth-of-type(2) .tips{
+	background:#f1bb8f;
+}
+.tips_con >div:nth-of-type(3) .tips{
+	background:#d9d561;
+}
+.tips_con >div:nth-of-type(4) .tips{
+	background:#f6d2a4;
+}
+
+
+
+/*media index*/
+@media (max-width:768px) {
+    .shop_details .tips {
+		padding: 9px;
+		background: red;
+		height: 60px;
+		width: 60px;
+		font-size: 16px;
+		color: #fff;
+		word-break: break-all;
+		text-align: center;
+		border-radius: 50%;
+		}
+
+	.shop-left img{
+		height:270px;
+		
+	}
+/*订单页*/
+
+
+		
+}
+
+
+
+/*订单页面*/
+.add_newadress{padding:10px;background:#f8f8f8}
+.goods_info{margin-top:31px;}
+.goods_all{font-size:20px;}
+.goods_price{color:red;font-size:18px;}
+.goods_all_price{color:red;font-size:20px;}
+/*新增地址*/
+.bd-number a {
+    float: left;
+    width: 16px;
+    height: 22px;
+    line-height: 22px;
+    background-color: #f0f0f0;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+	
+}
+.bd-number a:hover{
+	text-decoration:none;
+}
+.bd-number input {
+    float: left;
+    width: 40px;
+    height:22px;
+    padding: 2px 5px;
+}
+.confirm{
+	margin-top:20px;
+	padding-top:15px;
+	margin-bottom:50px;
+}
+.confirm img{display:block;margin:0 auto;}
+.confirm h4{font-weight:bold}
+.confirm em{font-style:normal;color:#999}
+.order_btn{background-color:#ff0000;color:#fff;margin-top:25px;}
+
+/*编辑收货地址*/
+.edit_address{background-color:#f8f8f8;margin-bottom:15px;padding:20px;}
+.item_btn + label {
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+.item_btn + label:active, .item_btn:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.item_btn:checked + label {
+	background-color: #29C13A;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.item_btn:checked + label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #fff;
+}
+
+.edit_address input[type="checkbox"]{
+	display:none;
+}
+
+/*支付样式*/
+.alipay{
+	padding:30px 15px;
+	border-top:1px dashed #ddd;
+	border-bottom:1px dashed #ddd;
+}
+.alipay .pay_sele{
+	padding:20px 10px;
+	background:#fef1de;
+}
+
+/*支付成功样式*/
+.paysucced{
+	padding:40px;
+	background:#faebd5;
+}
+.succed_icon{
+	display:inline-block;
+	*zoom:1;
+	_display:inline;
+	
+	width:100px;
+	height:100px;
+	margin-left:30%;
+	border-radius:50%;
+	border:2px solid #08C143; 
+	background:#faebd5;
+	line-height:118px;
+	text-align:center;
+}
+.succed_icon span{
+	color:#08C143;
+	font-size:36px;
+}
+.succeed_footer{margin-top:50px;}
+.succeed_footer a{}
+
+/*订单列表*/
+.order_list{background:#f8f8f8;margin-bottom:20px;}
+.order_list .order_tit{
+	font-size:18px;
+	color:#333;
+	padding-left:10px;
+	padding-top:10px;
+	border-bottom:1px solid #ddd;
+	
+}
+.order_list  strong.peing{
+	font-size:16px;
+	font-weight:bold;
+	color:red;
+}
+.order_list  strong.success{
+	font-size:16px;
+	font-weight:bold;
+	color:green;
+	
+}
+.order_list .btn-dele{
+	background-color:#00a0e9;
+	color:#fff;
+}
+
+
+
+
+
+

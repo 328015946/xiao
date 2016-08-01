@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Meta http-equiv="Content-Type" content="text/html"; charset="gb2312" >
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/public.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<!--navbar-->
+<div class="navbar navbar-default">
+	<div class="container">
+		<nav  role="navigation">
+			<div class="navbar-header">
+			  <a class="" href="index.html"><img src="images/login_logo.png" style="height:50px;"></a>
+			</div>
+			<div class="nav_right">
+			  <ul class="nav navbar-nav pull-right">
+				 <li class="" ><a href="javascript:void(0)">纪念服</a></li>
+			  </ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!--adress-->
+<div class="container">
+	<a class="btn btn-primary btn-lg">新增收获地址</a>
+	<!--新增收货地址-->
+	<div class="add_newadress row">
+		<h3>骑行天下</h3>
+		<div class="">
+			<div class="col-md-8">
+				<p>龙华新区民治街道民富路1980文创园3期一栋B-506</p>
+				<p>联系电话：0755-86134949</p>
+			</div>
+			<div class="col-md-4">
+				<span>默认地址</span>
+				<a href="edit_address.html" class="btn btn-primary"><span>编辑</span></a>
+			</div>
+		</div>
+		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#add_modal">添加地址</a>
+	</div>
+	<!--确认订单信息-->
+	<p>
+			<h2>确认订单信息</h2>
+	<p>
+	<div class="confirm row">
+		
+		<div class="col-md-2"><img src="images/order_01.png" alt="订单货品图片"></div>
+		<div class="col-md-8">
+			<h4>骑行天下第七届24小时400Km骑行纪念裤</h4>
+			<div class="row goods_info">
+				<div class="col-md-3">
+					<strong>尺码:</strong> <span>M</span>
+				</div>
+				<div class="col-md-3">
+					<strong>颜色:</strong> <span>默认色</span>
+				</div>
+				<div class="col-md-3">
+					
+						<span class="num_btn">
+							<a href="javascript:void(0)" class="decrease_btn disable">-</a>
+								<input type="text" class="shop_tx" value="1" maxlength="8" title="请输入购买量">
+							<a href="javascript:void(0)" class="increase_btn">+</a>
+							件
+						</span>
+					
+				</div>
+				<div class="col-md-3">
+					<strong>总计:</strong> <span class="goods_price">100</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<p>普通配送：<strong>包邮</strong></p>
+			<em>预计三天后（27号 )送达</em>
+		</div>
+	</div>
+	<div class="row">
+		<p class="text-right goods_all"><strong>实付:</strong> <span class="goods_all_price">￥100</span></p>
+		
+	</div>
+	<!--支付-->
+	<div class="alipay">
+		<h3>支付平台</h3>
+		<div class="pay_sele">
+			<input type="checkbox" name="alipay">
+			<img src="images/pay.png" alt="支付宝">
+		</div>
+		
+	</div>
+	<a href="#" class="btn btn-default order_btn pull-right" >立即支付</a>
+<!--添加地址模态框-->
+	<div class="modal fade" id="add_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+		  <div class="modal-content">
+			 <div class="modal-header">
+				<button type="button" class="close" 
+				   data-dismiss="modal" aria-hidden="true">
+					  &times;
+				</button>
+				<h3 class="modal-title" id="myModalLabel">
+				   添加收获地址
+				</h3>
+			 </div>
+			 <div class="modal-body">
+				<form class="form-horizontal">
+
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-3 control-label">* 收货人</label>
+					<div class="col-sm-9">
+					  <input type="text" class="form-control"  placeholder="收货人真实姓名">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-3 control-label">* 地址</label>
+					<div class="col-sm-9">
+					  <div class="col-sm-4">
+						<select id="province" name="province" class="form-control"><option></option></select>
+					  </div>
+					  <div class="col-sm-4">
+						<select id="province" name="province" class="form-control"><option></option></select>
+					  </div>
+					  <div class="col-sm-4">
+						<select id="province" name="province" class="form-control"><option></option></select>
+					  </div>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-3 control-label">* 具体位置</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" rows="3" placeholder="详细地址:如龙华街道58栋A座"></textarea>
+					 
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label for="inputPassword3" class="col-sm-3 control-label">* 联系电话</label>
+					<div class="col-sm-9">
+					  <input type="text" class="form-control"  placeholder="有效的电话格式">
+					</div>
+				  </div>
+				  
+				</form>
+			 </div>
+			 <div class="modal-footer">
+				<button type="button" class="btn btn-primary">
+				   保存收获地址
+				</button>
+				<button type="button" class="btn btn-default" 
+				   data-dismiss="modal">取消
+				</button>
+			 </div>
+		  </div>
+		</div>
+	</div>
+	<!--modal end-->
+	
+	
+</div>
+<script src="js/shop.js"></script>
+<script>
+$(function(){
+
+
+})
+
+</script>
+
+</body>
+</html>
