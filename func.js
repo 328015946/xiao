@@ -1,4 +1,5 @@
 //xiao.js 仿jquery  写于2015年  封装js常用函数
+//这个修改于2016年12月23
 function Xiao(any){
   
   this.elements=[];
